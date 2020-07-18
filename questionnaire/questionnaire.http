@@ -1,0 +1,47 @@
+POST http://localhost:8000/questionnaires/
+Content-Type: application/json
+
+{
+  "course": 1,
+  "topic": 1,
+  "questions": [
+    {
+      "description": "Question 1",
+      "alternatives": [
+        {
+          "description": "1.1 Alt",
+          "correct_alt": true
+        },
+        {
+          "description": "1.2 Alt"
+        },
+        {
+          "description": "1.3 Alt"
+        },
+        {
+          "description": "1.4 Alt"
+        }
+      ]
+    },
+    {
+      "description": "Question 2",
+      "alternatives": [
+        {
+          "description": "2.1 Alt"
+        },
+        {
+          "description": "2.2 Alt"
+        },
+        {
+          "description": "2.3 Alt",
+          "correct_alt": true
+        },
+        {
+          "description": "2.4 Alt"
+        }
+      ]
+    }
+  ]
+}
+
+###

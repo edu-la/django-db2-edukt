@@ -1,0 +1,32 @@
+POST http://localhost:8000/subscriber/logout/
+Content-Type: application/json
+Authorization: Token 7b0e48d75ad53a1f06e3c4ef1efd841778ac5131b75663b0bf8047884b745863
+
+{
+}
+
+###
+POST http://localhost:8000/subscriber/login/
+Content-Type: application/json
+
+{
+  "username": "MrCoron",
+  "password": "coronita123"
+}
+
+###
+POST http://localhost:8000/subscriber/register/
+Content-Type: application/json
+
+{
+  "username": "TEst",
+  "email": "coronito@bot.com",
+  "password": "coronita123",
+  "first_name": "Rs",
+  "last_name": "Test1",
+  "age": 21,
+  "subscription": true,
+  "school": 2
+}
+
+###
