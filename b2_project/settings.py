@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'subscription.apps.SubscriptionConfig',
     'universities.apps.UniversitiesConfig',
     'questionnaire.apps.QuestionnaireConfig',
+    'questionnaire.courses.apps.CoursesConfig',
     'rest_framework',
     'knox',
 ]

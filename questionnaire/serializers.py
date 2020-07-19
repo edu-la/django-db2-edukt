@@ -35,3 +35,10 @@ class QuestionnaireSerializer(serializers.ModelSerializer):
                 Alternative.objects.create(question_id=q.id, **alternative)
 
         return questionnaire
+
+
+class QuestionnaireHyperlinkedSerializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Questionnaire
+        fields = ['url']
