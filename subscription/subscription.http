@@ -1,4 +1,4 @@
-POST http://localhost:8000/subscriber/logout/
+POST http://localhost:8000/subscribers/logout/
 Content-Type: application/json
 Authorization: Token 7b0e48d75ad53a1f06e3c4ef1efd841778ac5131b75663b0bf8047884b745863
 
@@ -6,11 +6,11 @@ Authorization: Token 7b0e48d75ad53a1f06e3c4ef1efd841778ac5131b75663b0bf8047884b7
 }
 
 ###
-POST http://localhost:8000/subscriber/login/
+POST http://localhost:8000/subscribers/login/
 Content-Type: application/json
 
 {
-  "username": "MrCoron",
+  "username": "TEst",
   "password": "coronita123"
 }
 

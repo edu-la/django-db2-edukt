@@ -6,7 +6,7 @@ from . import models
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Course
-        fields = ['course_name']
+        fields = ['id', 'course_name']
 
 
 class ReinforceCourseSerializer(serializers.ModelSerializer):

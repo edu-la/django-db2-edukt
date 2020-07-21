@@ -6,7 +6,7 @@ from questionnaire.models import Questionnaire, Question, Alternative
 class AlternativeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Alternative
-        fields = ['description', 'correct_alt']
+        fields = ['id', 'description']
 
 
 class QuestionSerializer(serializers.ModelSerializer):
@@ -38,7 +38,31 @@ class QuestionnaireSerializer(serializers.ModelSerializer):
 
 
 class QuestionnaireHyperlinkedSerializer(serializers.HyperlinkedModelSerializer):
-
     class Meta:
         model = Questionnaire
         fields = ['url']
+
+
+class SolveQuestionnaireSerializer(serializers.Serializer):
+    answers = serializers.ListField(child=serializers.IntegerField(), write_only=True)
+    correct = serializers.IntegerField(read_only=True)
+    incorrect = serializers.IntegerField(read_only=True)
+    status = serializers.CharField(max_length=50, read_only=True)
+    message = serializers.CharField(max_length=250, read_only=True)
+
+    def update(self, instance, validated_data):
+        pass
+
+    def create(self, validated_data):   # POST
+        pass
+
+
+class HandleError(serializers.Serializer):
+    status = serializers.CharField(max_length=50, read_only=True)
+    message = serializers.CharField(max_length=250, read_only=True)
+
+    def update(self, instance, validated_data):
+        pass
+
+    def create(self, validated_data):
+        pass

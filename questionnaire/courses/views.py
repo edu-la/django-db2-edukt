@@ -9,3 +9,8 @@ class CoursesBySubscriberId(generics.ListAPIView):
 
     def get_queryset(self):
         return models.Course.objects.filter(reinforce__subscriber_id=self.kwargs['subscriber_id'])
+
+
+class Courses(generics.ListAPIView):
+    serializer_class = serializers.CourseSerializer
+    queryset = models.Course.objects.all()

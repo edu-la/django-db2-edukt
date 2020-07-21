@@ -1,3 +1,11 @@
+POST http://localhost:8000/questionnaires/2/s/Test
+Content-Type: application/json
+
+{
+  "answers": [1,7,1,1,1,1,1,1]
+}
+
+###
 POST http://localhost:8000/questionnaires/
 Content-Type: application/json
 

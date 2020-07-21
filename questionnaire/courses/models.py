@@ -1,5 +1,4 @@
 from django.db import models
-from subscription.models import Subscriber
 
 
 class Course(models.Model):
@@ -14,8 +13,3 @@ class Topic(models.Model):
 
     def __str__(self):
         return self.topic_name
-
-
-class Reinforce(models.Model):
-    subscriber = models.ForeignKey(Subscriber, on_delete=models.PROTECT, unique=False)
-    course = models.ForeignKey(Course, on_delete=models.PROTECT, unique=False)
